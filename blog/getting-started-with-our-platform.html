@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to create high-converting landing pages on a budget. Discover expert strategies for fast loading, CTA optimization, and global reach.">
+    <meta name="keywords" content="landing page builder, high-converting pages, CTA optimization, landing page design, conversion rate optimization">
+    <meta name="author" content="Landing Page Builder">
+    <meta property="og:title" content="How to Create High-Converting Landing Pages on a Budget">
+    <meta property="og:description" content="Learn expert strategies for creating high-converting landing pages with fast loading times and optimized CTAs.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://lp.com/blog">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="How to Create High-Converting Landing Pages">
+    <meta name="twitter:description" content="Expert guide to building landing pages that convert without breaking the bank.">
+    <title>How to Create High-Converting Landing Pages on a Budget - LPBuilder Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .smooth-transition {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .button-hover {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .button-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        .button-hover:active {
+            transform: scale(0.98);
+        }
+        
+        .accordion-item {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .accordion-content.active {
+            max-height: 500px;
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #1f2937;
+            margin: 5px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 12px 12px;
+            }
+            
+            .nav-menu.active {
+                display: flex;
+            }
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #1f2937;
+        }
+
+        .blog-content h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #374151;
+        }
+
+        .blog-content p {
+            line-height: 1.75;
+            margin-bottom: 1rem;
+            color: #4b5563;
+        }
+
+        .blog-content ul, .blog-content ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            color: #4b5563;
+            line-height: 1.75;
+        }
+
+        .blog-content strong {
+            font-weight: 600;
+            color: #1f2937;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="flex items-center justify-between w-full">
+                <a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g" class="text-2xl font-bold text-gray-900 hover:text-gray-700 smooth-transition">
+                    LPBuilder
+                </a>
+                <a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">
+                    ← Back
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Hero Section -->
+    <section class="hero-gradient pt-32 pb-12 px-4 sm:px-6 lg:px-8 mt-16">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <span class="inline-block px-4 py-2 bg-gray-200 text-gray-800 rounded-full text-sm font-semibold mb-4">Landing Page Strategy</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-bold text-gray-900 leading-tight tracking-tight mb-6">
+                    How to Create High-Converting Landing Pages on a Budget
+                </h1>
+                <p class="text-lg sm:text-xl text-gray-600 leading-relaxed mb-6">
+                    Master the art of building landing pages that convert visitors into customers without expensive tools or agencies. Discover proven strategies, best practices, and actionable insights to maximize your ROI.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <span>📅 Published: January 15, 2024</span>
+                    <span>⏱️ Reading Time: 8 minutes</span>
+                    <span>✍️ By Landing Page Builder Team</span>
+                </div>
+            </div>
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=675&fit=crop" alt="Team collaborating on landing page design and strategy" class="w-full rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Blog Content Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto blog-content">
+            <p>
+                In today's digital landscape, a high-converting landing page is essential for any business looking to grow. Whether you're launching a new product, building an email list, or promoting a service, your landing page is often the first impression potential customers have of your brand. The challenge? Creating an effective landing page that converts without spending thousands of dollars on expensive design agencies or premium tools.
+            </p>
+
+            <p>
+                The good news is that with the right strategy, knowledge, and tools, you can create landing pages that rival those built by expensive agencies—all on a budget. In this comprehensive guide, we'll walk you through everything you need to know about creating high-converting landing pages without breaking the bank.
+            </p>
+
+            <h2>Understanding Landing Page Fundamentals</h2>
+
+            <p>
+                Before diving into the tactics, it's crucial to understand what makes a landing page different from a regular website page. A landing page is a standalone web page designed with a single, focused objective—typically to convert visitors into leads or customers. Unlike your homepage or product pages, which serve multiple purposes, a landing page has one clear call-to-action (CTA) and minimal distractions.
+            </p>
+
+            <p>
+                The most effective landing pages share several key characteristics:
+            </p>
+
+            <ul>
+                <li><strong>Clear value proposition:</strong> Visitors immediately understand what you're offering and why they should care</li>
+                <li><strong>Focused messaging:</strong> Every element supports the primary conversion goal</li>
+                <li><strong>Fast loading times:</strong> Pages load in under 2 seconds, reducing bounce rates</li>
+                <li><strong>Mobile optimization:</strong> The page looks great and functions perfectly on all devices</li>
+                <li><strong>Compelling visuals:</strong> High-quality images and videos that reinforce your message</li>
+                <li><strong>Strong call-to-action:</strong> A clear, prominent button or form that guides visitors toward conversion</li>
+            </ul>
+
+            <h2>The Critical Importance of Page Speed</h2>
+
+            <p>
+                One of the most overlooked factors in landing page success is loading speed. Research shows that every second of delay in page load time can result in a 7% reduction in conversions. If your landing page takes 5 seconds to load instead of 2 seconds, you could be losing up to 21% of potential conversions.
+            </p>
+
+            <p>
+                Fast loading times are so important because they directly impact user experience and search engine rankings. Google has made page speed a ranking factor, meaning slower pages are less likely to appear in search results. Additionally, visitors have increasingly short attention spans—if your page doesn't load quickly, they'll bounce to a competitor's site.
+            </p>
+
+            <p>
+                To ensure your landing pages load quickly:
+            </p>
+
+            <ul>
+                <li>Use a content delivery network (CDN) to serve content from servers closest to your visitors</li>
+                <li>Optimize images by compressing them without losing quality</li>
+                <li>Minimize code and eliminate unnecessary scripts</li>
+                <li>Leverage browser caching to reduce load times for returning visitors</li>
+                <li>Choose a hosting provider with strong performance infrastructure</li>
+            </ul>
+
+            <h2>Mastering Call-to-Action Optimization</h2>
+
+            <p>
+                Your call-to-action is the bridge between interested visitors and actual conversions. A poorly designed or positioned CTA can mean the difference between a successful landing page and one that fails to deliver results. High-converting landing pages don't leave CTAs to chance—they strategically optimize every aspect.
+            </p>
+
+            <p>
+                Here are the key elements of CTA optimization:
+            </p>
+
+            <h3>Button Design and Placement</h3>
+
+            <p>
+                Your CTA button should stand out visually from the rest of the page. Use contrasting colors that draw the eye—if your page has a light background, use a dark button, and vice versa. The button should be large enough to be easily clickable on mobile devices (minimum 44x44 pixels recommended).
+            </p>
+
+            <p>
+                Placement is equally important. The primary CTA should appear above the fold (visible without scrolling), but research shows that repeating your CTA lower on the page can increase conversions by capturing visitors who scroll through your entire page before deciding to convert.
+            </p>
+
+            <h3>CTA Copy That Converts</h3>
+
+            <p>
+                The text on your button matters more than you might think. Instead of generic phrases like "Submit" or "Click Here," use action-oriented, benefit-focused language. Compare "Sign Up" to "Get My Free Guide"—the latter clearly communicates the benefit and creates urgency.
+            </p>
+
+            <p>
+                Effective CTA copy should:
+            </p>
+
+            <ul>
+                <li>Use first-person language ("Get My," "Start My," "Claim My")</li>
+                <li>Highlight the benefit or outcome</li>
+                <li>Create a sense of urgency or exclusivity</li>
+                <li>Be concise and action-oriented</li>
+            </ul>
+
+            <h2>Building Trust Through Strategic Design</h2>
+
+            <p>
+                Trust is a critical factor in conversion. Visitors need to feel confident that your business is legitimate and that taking the desired action (providing their email, making a purchase, etc.) is safe. Several design elements help build trust:
+            </p>
+
+            <p>
+                <strong>Social proof:</strong> Include testimonials, case studies, or user reviews that demonstrate satisfied customers. Numbers are powerful—"Join 10,000+ satisfied customers" is more convincing than "Join our community."
+            </p>
+
+            <p>
+                <strong>Professional design:</strong> A polished, well-designed page signals professionalism and legitimacy. Cluttered layouts, poor typography, and low-quality images undermine trust.
+            </p>
+
+            <p>
+                <strong>Security indicators:</strong> If you're collecting sensitive information, display security badges or SSL certificates to assure visitors their data is protected.
+            </p>
+
+            <p>
+                <strong>Clear contact information:</strong> Make it easy for visitors to reach you. Include an email address, phone number, or contact form. Businesses that hide their contact information appear less trustworthy.
+            </p>
+
+            <h2>Mobile Optimization: Non-Negotiable in 2024</h2>
+
+            <p>
+                Over 60% of web traffic now comes from mobile devices, yet many landing pages are still designed with desktop users in mind. This is a critical mistake that directly impacts conversion rates.
+            </p>
+
+            <p>
+                Mobile optimization goes beyond simply making your page responsive. It requires rethinking the entire user experience for smaller screens:
+            </p>
+
+            <ul>
+                <li>Simplify your layout and eliminate unnecessary elements</li>
+                <li>Ensure buttons and forms are easy to interact with on touchscreens</li>
+                <li>Use larger fonts for better readability</li>
+                <li>Minimize form fields—ask only for essential information</li>
+                <li>Test your page thoroughly on various devices and screen sizes</li>
+            </ul>
+
+            <h2>Crafting Compelling Copy That Sells</h2>
+
+            <p>
+                The words on your landing page are just as important as the design. Your copy should speak directly to your target audience's pain points and desires. Effective landing page copy:
+            </p>
+
+            <p>
+                <strong>Leads with benefits, not features:</strong> Instead of "Our software has advanced analytics," say "Track your performance and make data-driven decisions in minutes."
+            </p>
+
+            <p>
+                <strong>Uses clear, simple language:</strong> Avoid jargon and industry-specific terminology that might confuse visitors. Write as if you're explaining your offer to a friend.
+            </p>
+
+            <p>
+                <strong>Addresses objections:</strong> Anticipate why visitors might hesitate to convert and address those concerns directly. If cost is a concern, emphasize ROI. If they're worried about complexity, highlight ease of use.
+            </p>
+
+            <p>
+                <strong>Includes a compelling headline:</strong> Your headline is the first thing visitors read. It should clearly communicate your value proposition and compel them to keep reading.
+            </p>
+
+            <h2>Leveraging Global CDN for Competitive Advantage</h2>
+
+            <p>
+                A global Content Delivery Network (CDN) ensures your landing pages load quickly for visitors worldwide. This is particularly important if your business serves international customers. A CDN works by distributing your content across multiple servers in different geographic locations, serving content from the server closest to each visitor.
+            </p>
+
+            <p>
+                The benefits of using a global CDN include:
+            </p>
+
+            <ul>
+                <li>Faster page load times globally, reducing bounce rates</li>
+                <li>Improved SEO rankings due to better performance</li>
+                <li>Better user experience for international visitors</li>
+                <li>Reduced server load and bandwidth costs</li>
+                <li>Automatic failover if one server goes down</li>
+            </ul>
+
+            <h2>Testing and Optimization: The Path to Continuous Improvement</h2>
+
+            <p>
+                Creating a high-converting landing page isn't a one-time task—it's an ongoing process of testing and refinement. The most successful landing pages are continuously optimized based on data and user behavior.
+            </p>
+
+            <p>
+                A/B testing (also called split testing) allows you to compare two versions of your landing page to see which performs better. Test one element at a time to understand what drives conversions:
+            </p>
+
+            <ul>
+                <li>Headline variations</li>
+                <li>CTA button color, size, and copy</li>
+                <li>Form fields and their order</li>
+                <li>Images and videos</li>
+                <li>Layout and design elements</li>
+                <li>Copy and messaging</li>
+            </ul>
+
+            <p>
+                Track key metrics including bounce rate, time on page, form completion rate, and overall conversion rate. Use this data to identify what's working and what needs improvement.
+            </p>
+
+            <h2>Getting Started: Budget-Friendly Tools and Platforms</h2>
+
+            <p>
+                The good news is that you don't need an expensive agency or premium tools to create high-converting landing pages. Many platforms offer free or low-cost options:
+            </p>
+
+            <p>
+                <strong>Landing page builders:</strong> Platforms like LPBuilder, Unbounce, and Leadpages offer drag-and-drop interfaces, templates, and built-in optimization features without requiring coding knowledge.
+            </p>
+
+            <p>
+                <strong>Free hosting:</strong> Many platforms include free hosting, eliminating one major expense. This means you can get started with zero upfront costs.
+            </p>
+
+            <p>
+                <strong>Analytics tools:</strong> Google Analytics is free and provides comprehensive insights into visitor behavior and conversion performance.
+            </p>
+
+            <p>
+                <strong>Design resources:</strong> Free stock photo sites like Unsplash and Pexels provide high-quality images without licensing costs.
+            </p>
+
+            <h2>Conclusion: Your Path to High-Converting Landing Pages</h2>
+
+            <p>
+                Creating high-converting landing pages on a budget is absolutely achievable. By focusing on the fundamentals—fast loading times, clear value propositions, optimized CTAs, mobile-first design, and compelling copy—you can create landing pages that drive real results.
+            </p>
+
+            <p>
+                Remember that optimization is an ongoing process. Start with these principles, launch your landing page, collect data, and continuously test and refine. Each iteration brings you closer to your conversion goals.
+            </p>
+
+            <p>
+                The businesses that succeed with landing pages aren't necessarily those with the biggest budgets—they're the ones who understand their audience, focus on user experience, and commit to continuous improvement. With the right approach and tools, you can build landing pages that rival those created by expensive agencies, all while keeping costs low and ROI high.
+            </p>
+
+            <p>
+                Ready to start building? Choose a platform, apply these strategies, and watch your conversions grow. Your high-converting landing page is just a few clicks away.
+            </p>
+        </div>
+    </section>
+
+    <!-- Related Articles Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">Related Articles</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card-hover p-6 border border-gray-200 rounded-xl bg-white hover:border-gray-300">
+                    <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-semibold mb-3">Design Tips</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Landing Page Design Best Practices</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Learn the essential design principles that make landing pages stand out and convert visitors into customers.</p>
+                    <a href="#" class="text-gray-900 font-semibold hover:text-gray-700 smooth-transition">Read More →</a>
+                </div>
+                <div class="card-hover p-6 border border-gray-200 rounded-xl bg-white hover:border-gray-300">
+                    <span class="inline-block px-3 py-1 bg-gray-200 text-gray-800 rounded-full text-xs font-semibold mb-3">Conversion</span>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">The Science of Effective Call-to-Actions</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">Discover the psychology behind CTAs and how to craft buttons that drive maximum conversions.</p>
+                    <a href="#" class="text-gray-900 font-semibold hover:text-gray-700 smooth-transition">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=400&fit=crop" alt="Team collaboration" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-white via-white to-gray-100"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 tracking-tight">
+                Ready to Build Your High-Converting Landing Page?
+            </h2>
+            <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Start creating professional landing pages today with our budget-friendly platform. Join thousands of businesses achieving their conversion goals.
+            </p>
+            <a href="https://lp.com" class="button-hover inline-flex items-center justify-center px-10 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 smooth-transition shadow-lg text-lg">
+                Start Building Now
+                <svg class="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">LPBuilder</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Create high-converting landing pages on a budget with our powerful platform.
+                    </p>
+                </div>
+                
+                <!-- Product -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#features" class="text-gray-400 hover:text-white smooth-transition">Features</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white smooth-transition">Pricing</a></li>
+                        <li><a href="https://lp.com" class="text-gray-400 hover:text-white smooth-transition">Dashboard</a></li>
+                        <li><a href="https://lp.com/blog" class="text-gray-400 hover:text-white smooth-transition">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#contact" class="text-gray-400 hover:text-white smooth-transition">Contact</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Press</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col sm:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 sm:mb-0">
+                        &copy; 2024 Landing Page Builder. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white smooth-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M8.29 20c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-7.593 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white smooth-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white smooth-transition">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Close menu when a link is clicked
+            const navLinks = navMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+        }
+        
+        // Smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Sticky header on scroll
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop) {
+                header.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    </script>
+</body>
+</html>
