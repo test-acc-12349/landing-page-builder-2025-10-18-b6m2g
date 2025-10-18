@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Landing Page Builder - Create high-converting landing pages on a budget with fast loading, high CTA optimization, and global CDN support.">
     <meta name="keywords" content="landing page builder, fast loading, CTA optimization, global CDN, free hosting">
     <meta name="author" content="Landing Page Builder">
@@ -15,6 +23,7 @@
     <meta name="twitter:description" content="Landing Pages On A Budget">
     <title>Landing Page Builder - Create High-Converting Pages On A Budget</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
         
@@ -38,20 +47,21 @@
         }
         
         .card-hover {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
         
         .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
         }
         
         .button-hover {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
         
         .button-hover:hover {
             transform: scale(1.05);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
         }
         
         .button-hover:active {
@@ -72,47 +82,23 @@
             max-height: 500px;
         }
         
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
+        .testimonial-card {
+            transition: all 0.4s ease-in-out;
         }
         
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background-color: #1f2937;
-            margin: 5px 0;
-            transition: 0.3s;
-            border-radius: 2px;
+        .testimonial-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 30px -5px rgba(0, 0, 0, 0.12);
         }
         
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-            
-            .nav-menu {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-                border-radius: 0 0 12px 12px;
-            }
-            
-            .nav-menu.active {
-                display: flex;
-            }
+        .star-rating {
+            display: inline-flex;
+            gap: 0.25rem;
         }
         
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
+        .star {
+            color: #fbbf24;
+            font-size: 1rem;
         }
     </style>
 </head>
@@ -121,22 +107,31 @@
     <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <a href="#" class="text-2xl font-bold text-gray-900 hover:text-gray-700 smooth-transition">
+                <a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g" class="text-2xl font-bold text-gray-900 hover:text-gray-700 smooth-transition">
                     LPBuilder
                 </a>
             </div>
             
-            <div class="nav-menu" id="navMenu">
+            <div class="hidden md:flex nav-menu gap-8">
                 <a href="#features" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">Features</a>
                 <a href="#benefits" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">Benefits</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">Testimonials</a>
                 <a href="#faq" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">FAQ</a>
                 <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition">Contact</a>
             </div>
             
-            <div class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            
+            <div class="mobile-menu hidden md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-gray-200">
+                <div class="flex flex-col p-4 space-y-4">
+                    <a href="#features" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition py-2">Features</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition py-2">Benefits</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition py-2">Testimonials</a>
+                    <a href="#faq" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition py-2">FAQ</a>
+                    <a href="#contact" class="text-gray-700 hover:text-gray-900 font-medium smooth-transition py-2">Contact</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -148,7 +143,7 @@
                 Landing Pages On A Budget
             </h1>
             <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
-                Create high-converting landing pages without breaking the bank. Fast loading times, optimized CTAs, and global reach at your fingertips.
+                Create stunning, high-converting landing pages without breaking the bank. Experience lightning-fast loading times, optimized call-to-action buttons, and global reach with our comprehensive platform designed for businesses of all sizes.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://lp.com" class="button-hover inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 smooth-transition shadow-lg">
@@ -157,7 +152,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
                     </svg>
                 </a>
-                <a href="#features" class="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 smooth-transition">
+                <a href="#features" class="button-hover inline-flex items-center justify-center px-8 py-4 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-50 smooth-transition">
                     Learn More
                 </a>
             </div>
@@ -172,47 +167,47 @@
                     Powerful Features
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Everything you need to create and deploy landing pages that convert
+                    Everything you need to create and deploy landing pages that convert visitors into customers
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Fast Loading -->
-                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-300">
-                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-400">
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Fast Loading</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Lightning-Fast Loading</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Lightning-fast page load times that keep your visitors engaged and improve your SEO rankings significantly.
+                        Pages load in under 2 seconds globally with our optimized infrastructure. Every millisecond matters for conversions, and our platform delivers exceptional performance that keeps your visitors engaged and improves your SEO rankings significantly.
                     </p>
                 </div>
                 
                 <!-- High CTA -->
-                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-300">
-                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-400">
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">High CTA Optimization</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Conversion-Optimized CTAs</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Strategic call-to-action placement and design patterns proven to maximize conversion rates and user engagement.
+                        Strategic call-to-action placement and design patterns proven to maximize conversion rates. Our expert team has tested hundreds of variations to identify what works best, resulting in average conversion rate increases of 35% compared to standard designs.
                     </p>
                 </div>
                 
                 <!-- Global CDN -->
-                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-300">
-                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6">
+                <div class="card-hover p-8 border border-gray-200 rounded-xl bg-white hover:border-gray-400">
+                    <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15.863 13H18a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M13 16a2 2 0 100-4 2 2 0 000 4zm6-8a2 2 0 100-4 2 2 0 000 4z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">Global CDN</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Global CDN Network</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Serve your pages from data centers worldwide, ensuring optimal performance for users regardless of location.
+                        Serve your pages from data centers worldwide, ensuring optimal performance for users regardless of geographic location. With servers on every continent, your content is always close to your audience for maximum speed and reliability.
                     </p>
                 </div>
             </div>
@@ -224,51 +219,188 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
-                    Why Choose Us
+                    Why Choose LPBuilder
                 </h2>
                 <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Get more value for your investment with our comprehensive platform
+                    Get more value for your investment with our comprehensive platform and dedicated support
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Free Hosting -->
-                <div class="flex flex-col items-center text-center p-8">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-md">
+                <div class="card-hover flex flex-col items-center text-center p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Free Hosting</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">100% Free Hosting</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        No hosting fees. No hidden charges. Your landing pages are hosted on our secure, reliable infrastructure at no cost.
+                        No hosting fees. No hidden charges. No surprise billing. Your landing pages are hosted on our secure, enterprise-grade infrastructure at absolutely no cost. Scale your campaigns without worrying about hosting expenses.
                     </p>
                 </div>
                 
-                <!-- Global Offices -->
-                <div class="flex flex-col items-center text-center p-8">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-md">
+                <!-- Global Support -->
+                <div class="card-hover flex flex-col items-center text-center p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Global Offices</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">24/7 Global Support</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Support teams across multiple time zones ready to help you succeed, 24/7 availability for your peace of mind.
+                        Support teams across multiple time zones ready to help you succeed around the clock. Whether you're in New York, London, or Tokyo, our experts are available to answer your questions and resolve issues instantly.
                     </p>
                 </div>
                 
                 <!-- Free Revisions -->
-                <div class="flex flex-col items-center text-center p-8">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6 shadow-md">
+                <div class="card-hover flex flex-col items-center text-center p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-6 smooth-transition hover:bg-gray-200">
                         <svg class="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Free Revisions</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Unlimited Revisions</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Unlimited revisions until you're completely satisfied. We'll work with you to perfect your landing page.
+                        Unlimited revisions until you're completely satisfied. We'll work with you iteratively to perfect your landing page, test different variations, and optimize for maximum performance and conversions.
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    About LPBuilder
+                </h2>
+            </div>
+            
+            <div class="space-y-8 text-lg text-gray-600 leading-relaxed">
+                <p>
+                    LPBuilder was founded in 2018 by a team of digital marketing experts and software engineers who recognized a critical gap in the market. They saw businesses struggling with expensive landing page builders that required technical expertise, long setup times, and ongoing maintenance costs. Our founders believed that creating high-converting landing pages should be accessible to everyone, regardless of budget or technical skill level. What started as a side project quickly grew into a full-fledged platform serving thousands of businesses worldwide, from solopreneurs to Fortune 500 companies.
+                </p>
+                
+                <p>
+                    Our mission is to democratize digital marketing by providing powerful, affordable tools that help businesses of all sizes create stunning landing pages that convert. We're committed to continuous innovation, exceptional customer service, and building a community where entrepreneurs can learn, grow, and succeed. Every feature we build, every optimization we make, and every decision we take is guided by our core values: simplicity, affordability, reliability, and customer success. We believe that great marketing shouldn't require a marketing degree or a massive budget—it should be available to anyone with a vision and determination to succeed.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 tracking-tight">
+                    What Our Customers Say
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Join thousands of satisfied customers who have transformed their marketing with LPBuilder
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "LPBuilder helped us increase our conversion rates by 42% in just three months. The platform is incredibly intuitive, and the fast loading times have made a huge difference in our bounce rates. Customer support is responsive and genuinely helpful."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            SJ
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Sarah Johnson</h4>
+                            <p class="text-sm text-gray-600">Marketing Director, TechStart Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "As a freelancer, I was looking for an affordable solution to create landing pages for my clients. LPBuilder is perfect—it's budget-friendly, packed with features, and the results speak for themselves. My clients love the fast performance."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            MC
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Marcus Chen</h4>
+                            <p class="text-sm text-gray-600">Freelance Web Designer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "We've saved over $50,000 annually by switching to LPBuilder. The platform's global CDN ensures our pages load instantly for our international audience. The CTA optimization features alone have doubled our lead generation."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            ER
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Emily Rodriguez</h4>
+                            <p class="text-sm text-gray-600">VP of Marketing, Global Solutions Ltd.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card p-8 bg-white rounded-xl border border-gray-200 hover:border-gray-400">
+                    <div class="flex items-center mb-4">
+                        <div class="star-rating">
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                            <i class="fas fa-star star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Outstanding platform! The ease of use combined with powerful features makes LPBuilder unbeatable. I was able to launch my first campaign in under an hour, and the support team went above and beyond to help optimize it."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            DK
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">David Kim</h4>
+                            <p class="text-sm text-gray-600">Founder, StartUp Ventures</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -286,7 +418,7 @@
                 Ready to Launch Your Landing Page?
             </h2>
             <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-                Join thousands of businesses creating high-converting landing pages with our platform today.
+                Join thousands of businesses creating high-converting landing pages with our platform today. Start for free and see the difference in your conversion rates within days.
             </p>
             <a href="https://lp.com" class="button-hover inline-flex items-center justify-center px-10 py-4 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 smooth-transition shadow-lg text-lg">
                 Start Building Now
@@ -305,7 +437,7 @@
                     Frequently Asked Questions
                 </h2>
                 <p class="text-lg text-gray-600">
-                    Find answers to common questions about our platform
+                    Find answers to common questions about our platform and services
                 </p>
             </div>
             
@@ -320,7 +452,7 @@
                     </button>
                     <div class="accordion-content border-t border-gray-200">
                         <div class="px-6 py-4 text-gray-600 leading-relaxed">
-                            Our free plan includes unlimited landing pages, free hosting, global CDN access, basic analytics, and email support. It's perfect for getting started.
+                            Our free plan includes unlimited landing pages, free hosting on our global CDN, basic analytics dashboard, mobile-responsive templates, email support, and access to our template library. You can create and publish unlimited pages without any credit card required. It's perfect for getting started and testing the platform before upgrading to premium features.
                         </div>
                     </div>
                 </div>
@@ -335,7 +467,7 @@
                     </button>
                     <div class="accordion-content border-t border-gray-200">
                         <div class="px-6 py-4 text-gray-600 leading-relaxed">
-                            Our pages load in under 2 seconds on average globally, thanks to our optimized infrastructure and global CDN network. We focus on performance to maximize conversions.
+                            Our pages load in under 2 seconds on average globally, thanks to our optimized infrastructure and global CDN network with data centers on every continent. We focus on performance optimization because we know that every millisecond matters for user experience and conversions. Our platform achieves average Google PageSpeed scores above 95, significantly improving your SEO rankings and reducing bounce rates.
                         </div>
                     </div>
                 </div>
@@ -350,7 +482,7 @@
                     </button>
                     <div class="accordion-content border-t border-gray-200">
                         <div class="px-6 py-4 text-gray-600 leading-relaxed">
-                            Yes! You can connect your own domain to any landing page. Simply update your DNS settings, and you're ready to go. We support custom domains on all plans.
+                            Yes! You can connect your own domain to any landing page created with LPBuilder. Simply update your DNS settings to point to our servers, and you're ready to go. We support custom domains on all plans, including the free tier. Our team can provide step-by-step instructions for popular domain registrars, and our support team is available to help with any setup questions.
                         </div>
                     </div>
                 </div>
@@ -365,7 +497,7 @@
                     </button>
                     <div class="accordion-content border-t border-gray-200">
                         <div class="px-6 py-4 text-gray-600 leading-relaxed">
-                            We offer email support on all plans, with priority support for premium customers. Our global support team is available across multiple time zones to assist you.
+                            We offer comprehensive support across all plans. Free plan users get email support with 24-hour response times. Premium customers receive priority support with guaranteed 2-hour response times, live chat access, and dedicated account managers. Our global support team operates 24/7 across multiple time zones, so you always have someone available to help. We also provide extensive documentation, video tutorials, and a community forum.
                         </div>
                     </div>
                 </div>
@@ -373,14 +505,14 @@
                 <!-- FAQ Item 5 -->
                 <div class="accordion-item border border-gray-200 rounded-lg bg-white">
                     <button class="faq-button w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 smooth-transition text-left" onclick="toggleAccordion(this)">
-                        <span class="font-semibold text-gray-900">Do you offer free revisions?</span>
+                        <span class="font-semibold text-gray-900">Do you offer free revisions and optimization?</span>
                         <svg class="w-5 h-5 text-gray-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                         </svg>
                     </button>
                     <div class="accordion-content border-t border-gray-200">
                         <div class="px-6 py-4 text-gray-600 leading-relaxed">
-                            Absolutely! We provide unlimited free revisions until you're completely satisfied with your landing page. Your success is our priority.
+                            Absolutely! We provide unlimited free revisions until you're completely satisfied with your landing page. Our team can help you test different headlines, CTA button placements, color schemes, and layouts to optimize for maximum conversions. Premium customers also get access to A/B testing tools and detailed analytics to understand what resonates with your audience. Your success is our priority.
                         </div>
                     </div>
                 </div>
@@ -396,7 +528,7 @@
                     Get In Touch
                 </h2>
                 <p class="text-lg text-gray-600">
-                    Have questions? We'd love to hear from you. Reach out anytime.
+                    Have questions? We'd love to hear from you. Reach out anytime and our team will respond promptly.
                 </p>
             </div>
             
@@ -406,15 +538,15 @@
                     <form class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-900 mb-2">Full Name</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition" placeholder="John Doe">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition hover:border-gray-400" placeholder="John Doe">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-900 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition" placeholder="john@example.com">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition hover:border-gray-400" placeholder="john@example.com">
                         </div>
                         <div>
                             <label for="message" class="block text-sm font-medium text-gray-900 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition resize-none" placeholder="Tell us how we can help..."></textarea>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent smooth-transition resize-none hover:border-gray-400" placeholder="Tell us how we can help..."></textarea>
                         </div>
                         <button type="submit" class="button-hover w-full px-6 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 smooth-transition">
                             Send Message
@@ -424,8 +556,8 @@
                 
                 <!-- Contact Info -->
                 <div class="flex flex-col justify-center space-y-8">
-                    <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div class="card-hover flex items-start space-x-4 p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-400">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 smooth-transition hover:bg-gray-200">
                             <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
@@ -436,10 +568,10 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div class="card-hover flex items-start space-x-4 p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-400">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 smooth-transition hover:bg-gray-200">
                             <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
                         </div>
                         <div>
@@ -448,8 +580,8 @@
                         </div>
                     </div>
                     
-                    <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div class="card-hover flex items-start space-x-4 p-6 bg-gray-50 rounded-lg border border-gray-200 hover:border-gray-400">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0 smooth-transition hover:bg-gray-200">
                             <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                             </svg>
@@ -472,7 +604,7 @@
                 <div>
                     <h3 class="text-2xl font-bold mb-4">LPBuilder</h3>
                     <p class="text-gray-400 leading-relaxed">
-                        Create high-converting landing pages on a budget with our powerful platform.
+                        Create high-converting landing pages on a budget with our powerful, affordable platform designed for modern businesses.
                     </p>
                 </div>
                 
@@ -483,7 +615,7 @@
                         <li><a href="#features" class="text-gray-400 hover:text-white smooth-transition">Features</a></li>
                         <li><a href="#benefits" class="text-gray-400 hover:text-white smooth-transition">Pricing</a></li>
                         <li><a href="https://lp.com" class="text-gray-400 hover:text-white smooth-transition">Dashboard</a></li>
-                        <li><a href="https://lp.com/blog" class="text-gray-400 hover:text-white smooth-transition">Blog</a></li>
+                        <li><a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g/blog.html" class="text-gray-400 hover:text-white smooth-transition">Blog</a></li>
                     </ul>
                 </div>
                 
@@ -492,9 +624,9 @@
                     <h4 class="font-semibold text-white mb-4">Company</h4>
                     <ul class="space-y-3">
                         <li><a href="#contact" class="text-gray-400 hover:text-white smooth-transition">Contact</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Careers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Press</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white smooth-transition">About Us</a></li>
+                        <li><a href="https://lp.com/careers" class="text-gray-400 hover:text-white smooth-transition">Careers</a></li>
+                        <li><a href="https://lp.com/press" class="text-gray-400 hover:text-white smooth-transition">Press</a></li>
                     </ul>
                 </div>
                 
@@ -502,10 +634,10 @@
                 <div>
                     <h4 class="font-semibold text-white mb-4">Legal</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Cookie Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white smooth-transition">Security</a></li>
+                        <li><a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g/privacy.html" class="text-gray-400 hover:text-white smooth-transition">Privacy Policy</a></li>
+                        <li><a href="https://test-acc-12349.github.io/landing-page-builder-2025-10-18-b6m2g/terms.html" class="text-gray-400 hover:text-white smooth-transition">Terms of Service</a></li>
+                        <li><a href="https://lp.com/cookie-policy" class="text-gray-400 hover:text-white smooth-transition">Cookie Policy</a></li>
+                        <li><a href="https://lp.com/security" class="text-gray-400 hover:text-white smooth-transition">Security</a></li>
                     </ul>
                 </div>
             </div>
@@ -516,17 +648,17 @@
                         &copy; 2024 Landing Page Builder. All rights reserved.
                     </p>
                     <div class="flex space-x-6">
-                        <a href="#" aria-label="Twitter" class="text-gray-400 hover:text-white smooth-transition">
+                        <a href="https://twitter.com" aria-label="Twitter" class="text-gray-400 hover:text-white smooth-transition transform hover:scale-110">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M8.29 20c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-7.593 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
                             </svg>
                         </a>
-                        <a href="#" aria-label="LinkedIn" class="text-gray-400 hover:text-white smooth-transition">
+                        <a href="https://linkedin.com" aria-label="LinkedIn" class="text-gray-400 hover:text-white smooth-transition transform hover:scale-110">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
                             </svg>
                         </a>
-                        <a href="#" aria-label="Facebook" class="text-gray-400 hover:text-white smooth-transition">
+                        <a href="https://facebook.com" aria-label="Facebook" class="text-gray-400 hover:text-white smooth-transition transform hover:scale-110">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
                             </svg>
@@ -538,20 +670,32 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('navMenu');
-        
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close menu when a link is clicked
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('header nav .mobile-menu-button');
+            const mobileMenu = document.querySelector('header nav .mobile-menu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    const icon = mobileMenuButton.querySelector('i');
+                    if (icon) {
+                        icon.classList.toggle('fa-bars');
+                        icon.classList.toggle('fa-times');
+                    }
+                });
+
+                const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+                mobileMenuLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                        const icon = mobileMenuButton.querySelector('i');
+                        if (icon) {
+                            icon.classList.remove('fa-times');
+                            icon.classList.add('fa-bars');
+                        }
+                    });
+                });
+            }
         });
         
         // Accordion functionality
@@ -605,5 +749,6 @@
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
     </script>
+</body>
 </body>
 </html>
